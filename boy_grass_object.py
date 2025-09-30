@@ -16,12 +16,16 @@ class Ball:
             self.image=load_image('ball41x41.png')
         self.x=random.randint(0,800)
         self.y=599
-        self.speed=random.randint(2,8)
+        self.speed=random.randint(5,20)
 
     def draw(self):
         self.image.draw(self.x,self.y)
     def update(self):
-        pass
+        self.y-=self.speed
+
+        if self.y<=self.size//2+50:
+            self.y=self.size//2+50
+            self.speed=0
 
 def reset_world():
     global grass,balls
