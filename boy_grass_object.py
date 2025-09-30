@@ -36,14 +36,12 @@ def reset_world():
 def update_world():
     for ball in balls:
         ball.update()
-    pass
 
 
 def render_world():
     grass.draw()
     for ball in balls:
         ball.draw()
-    pass
 
 open_canvas()
 
