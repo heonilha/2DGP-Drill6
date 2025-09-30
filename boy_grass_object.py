@@ -3,9 +3,9 @@ import random
 
 class Grass:
     def __init__(self):
-        pass
+        self.image=load_image('grass.png')
     def draw(self):
-        pass
+        self.image.draw(400,30)
 
 class Ball:
     def __init__(self):
