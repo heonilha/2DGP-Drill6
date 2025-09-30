@@ -9,9 +9,17 @@ class Grass:
 
 class Ball:
     def __init__(self):
-        pass
+        self.size=random.choice([21,41])
+        if self.size==21:
+            self.image=load_image('ball21x21.png')
+        else:
+            self.image=load_image('ball41x41.png')
+        self.x=random.randint(0,800)
+        self.y=599
+        self.speed=random.randint(2,8)
+
     def draw(self):
-        pass
+        self.image.draw(self.x,self.y)
     def update(self):
         pass
 
